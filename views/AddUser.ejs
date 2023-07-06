@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logout {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+
+        }
+        .btn {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #009688;
+            color: #fff;
+            text-decoration: none ;
+        }
+        .btn:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is user board</h1>
+
+    <form method="post">
+        <table align="center" border="">
+            <tr>
+                <td>Name : - </td>
+                <td><input type="name" name="name"></td>
+            </tr>
+            <tr>
+                <td>Email : - </td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Password : - </td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Contact : - </td>
+                <td><input type="contact" name="contact"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit"></td>
+            </tr>
+            
+        </table>
+    </form>
+    <br><br>
+
+</body>
+</html>
+
+<a href="/Add_Task" class="btn">Add Task</a>
+<a href="/dashboard" class="btn">Dashboard</a>
+    
+<br><br>
+
+<a href="/logout" class="logout">Logout</a>

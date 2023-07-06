@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logout {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+        }
+
+        .btn {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: blue;
+            color: #fff;
+            text-decoration: none ;
+        }
+        .btn:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Dashboard Page</h2>
+
+    
+<table border="1"  style="text-align: center;" align="center" width="40%" >
+    
+    <th>Id</th>
+    <th>Task name</th>
+    <th>User name</th>
+    <th>Status</th>
+
+    <%results.forEach(function(jay){ %>
+            <tr>
+                <td><%=jay.id %></td>
+                <td><%=jay.task_name %></td>
+                <td><%=jay.name%></td>
+                <td>
+                    <% if (jay.status == 0) { %>
+                        <b>PENDING</b>
+                    <% } else if(jay.status == 1) { %>
+                        <b>COMPLITE</b>
+                    <% } else{ %>
+                        <b>DECLINE</b>
+                    <% } %>
+                </td>
+    
+            </tr>
+        <% }); %>
+
+</table>
+<br><br>
+
+    <a href="/Add_User" class="btn">Add User</a>
+    <a href="/Add_Task" class="btn">Add Task</a><br><br><br>
+    <a href="/pending" class="btn">Pending Task</a>
+    <a href="/complite" class="btn">Complite Task</a>
+    <a href="/decline" class="btn">Decline Task</a>
+
+    <br><br>
+
+    <a href="/logout" class="logout">Logout</a>
+
+</body>
+
+</html>

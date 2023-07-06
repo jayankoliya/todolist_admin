@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logout {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+        }
+
+        .btn {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: blue;
+            color: #fff;
+            text-decoration: none ;
+        }
+        .btn:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Pending Page</h2>
+
+    <table border="1"  style="text-align: center;" align="center" width="40%" >
+    
+        <th>Id</th>
+        <th>Task name</th>
+        <th>User name</th>
+    
+        <%results.forEach(function(jay){ %>
+                <tr>
+                    <td>
+                        <%=jay.id %>
+                    </td>
+                    <td>
+                        <%=jay.task_name %>
+                    </td>
+                    <td>
+                        <%=jay.name%>
+                    </td>
+                </tr>
+            <% }); %>
+    
+    </table>
+    <br><br>
+
+<a href="/dashboard" class="btn">Dashboard</a>
+
+</body>
+
+</html>
